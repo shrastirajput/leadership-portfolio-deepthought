@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership Portfolio — Rajan Iyer · March 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F0FAF5;
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+/* ── TOP BAR ── */
+.card-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #F0EDE8;
+  padding: 24px 32px;
+}
+
+.card-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.brand-icon {
+  width: 20px;
+  height: 20px;
+  background: #2D6A4F;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.brand-icon svg { fill: white; }
+
+.brand-name {
+  font-size: 10px;
+  font-weight: 600;
+  color: #CCCCDD;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card-topbar-identity {
+  flex: 1;
+  text-align: center;
+}
+
+.emp-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: #1A1A2E;
+  line-height: 1.15;
+}
+
+.emp-role {
+  font-size: 12px;
+  color: #8888AA;
+  margin-top: 4px;
+}
+
+.emp-uid {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #CCCCDD;
+  letter-spacing: 1.2px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.card-topbar-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.month-label {
+  font-size: 10px;
+  color: #CCCCDD;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.month-select {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8888AA;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.doc-body { padding: 40px 40px 48px; }
+
+/* ── HERO (Option A) ── */
+.hero {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #F0EDE8;
+}
+
+.hero-headline {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: #1A1A2E;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.hero-narrative {
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pace-ring {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pace-ring svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pace-ring-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.pace-ring-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 11px;
+  color: #2D6A4F;
+}
+
+.pace-ring-sub {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #2D6A4F;
+  margin-top: 2px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #F9F9FB;
+  border: 1px solid #EBEBF0;
+  color: #4B5563;
+}
+
+.meta-chip strong {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: #1A1A2E;
+}
+
+/* ── CHAPTERS ── */
+.chapter { margin-bottom: 44px; }
+
+.chapter-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #AAAACC;
+  margin-bottom: 10px;
+}
+
+.chapter-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #1A1A2E;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.chapter-narrative {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  background: #F9F9FB;
+  border: 1px solid #EBEBF0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.stat-card .big {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: #1A1A2E;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-card .big span { font-size: 18px; color: #AAAACC; }
+
+.stat-card .lbl {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #AAAACC;
+}
+
+.stat-card .sub {
+  font-size: 13px;
+  color: #6B7280;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.dbar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.dbar-seg { border-radius: 2px; }
+
+.cap-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.cap-lbl { font-size: 13px; color: #6B7280; width: 130px; flex-shrink: 0; }
+
+.cap-track {
+  flex: 1;
+  height: 8px;
+  background: #F0EDE8;
+  border-radius: 4px;
+  position: relative;
+}
+
+.cap-fill { height: 100%; border-radius: 4px; }
+
+.cap-threshold {
+  position: absolute;
+  top: -4px;
+  left: 60%;
+  width: 2px;
+  height: 16px;
+  background: #AAAACC;
+  border-radius: 1px;
+}
+
+.cap-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  width: 28px;
+  text-align: right;
+}
+
+.cap-note { font-size: 12px; color: #AAAACC; margin-top: 8px; }
+
+.runway {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0 10px;
+}
+
+.runway-line {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #EBEBF0;
+}
+
+.runway-prog {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background: #2D6A4F;
+}
+
+.ms {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ms-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #EBEBF0;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.ms-dot.done { background: #2D6A4F; border-color: #2D6A4F; }
+.ms-dot.now { border-color: #2D6A4F; box-shadow: 0 0 0 4px #D1FAE5; }
+.ms-dot.proj { border-color: #B5451B; border-style: dashed; }
+
+.ms-lv { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: #1A1A2E; }
+.ms-dt { font-size: 10px; color: #AAAACC; margin-top: 2px; }
+.ms-tag {
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.tag-done { background: #D1FAE5; color: #065F46; }
+.tag-now { background: #DBEAFE; color: #1E40AF; }
+.tag-proj { background: #FEF3C7; color: #92400E; }
+
+.evidence {
+  border: 1px solid #EBEBF0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.evidence summary {
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  background: #F9F9FB;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.evidence summary::-webkit-details-marker { display: none; }
+.evidence summary::after { content: '+'; font-size: 18px; color: #AAAACC; font-weight: 300; }
+.evidence[open] summary::after { content: '−'; }
+.evidence-body { padding: 0 18px 16px; border-top: 1px solid #F0EDE8; }
+
+.commits { margin-top: 12px; }
+
+.commit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid #F0EDE8;
+}
+
+.commit:last-child { border-bottom: none; }
+
+.commit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2D6A4F;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.commit-text { font-size: 13px; color: #4B5563; line-height: 1.5; flex: 1; }
+.commit-date { font-size: 11px; color: #AAAACC; font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }
+
+.type-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.type-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: #F9F9FB;
+  border: 1px solid #EBEBF0;
+  color: #4B5563;
+}
+
+.type-chip strong { font-family: 'JetBrains Mono', monospace; color: #1A1A2E; }
+
+.supporting { border-top: 1px solid #F0EDE8; padding-top: 8px; }
+.supporting .chapter { margin-bottom: 0; border-bottom: 1px solid #F0EDE8; }
+.supporting .evidence { border: none; border-radius: 0; margin-top: 0; }
+
+.supporting .evidence summary {
+  padding: 20px 0;
+  background: transparent;
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #1A1A2E;
+  font-weight: 400;
+}
+
+.supporting .evidence-body { padding: 0 0 28px; border-top: none; }
+
+@media (max-width: 600px) {
+  .doc-body { padding: 28px 24px 36px; }
+  .card-topbar { flex-direction: column; align-items: center; text-align: center; }
+  .card-topbar-month { align-items: center; }
+  .stat-row { grid-template-columns: 1fr; }
+  .hero-headline { font-size: 26px; }
+  .hero-proof { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <div class="card-topbar">
+    <div class="card-topbar-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 20 20" width="12" height="12"><path d="M10 2L3 7v11h5v-5h4v5h5V7L10 2z"/></svg>
+      </div>
+      <div class="brand-name">PDGMS</div>
+    </div>
+    <div class="card-topbar-identity">
+      <div class="emp-name">Rajan Iyer</div>
+      <div class="emp-role">Production Planning Lead — Sterile Injectables · Vayura Lifesciences</div>
+      <div class="emp-uid">PDGMS-EMP-00512 · PF-2026-03-00512</div>
+    </div>
+    <div class="card-topbar-month">
+      <span class="month-label">Month</span>
+      <select class="month-select">
+        <option value="2026-03" selected>Mar 2026</option>
+        <option value="2026-02">Feb 2026</option>
+        <option value="2026-01">Jan 2026</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="doc-body">
+
+    <section class="hero">
+      <div class="chapter-label">March 2026 · Leadership Portfolio</div>
+      <h1 class="hero-headline">Rajan's strongest month since joining</h1>
+      <p class="hero-narrative">
+        Composite score jumped from 64 to 71 — the highest since joining Vayura Lifesciences. The process validation protocol for the lyophilized injectable line, stuck in regulatory review since December, finally cleared after Rajan organized a joint review session. Delivery and original work scores now exceed Program Lead thresholds. Framework application remains the one area to close.
+      </p>
+
+      <div class="hero-proof">
+        <div class="pace-ring">
+          <svg viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+            <path fill="none" stroke="#2D6A4F" stroke-width="2"
+              d="M44,10 C56,8 68,15 74,26 C80,37 80,51 74,62 C68,73 56,80 44,80 C32,80 20,73 14,62 C8,51 8,37 14,26 C20,15 32,8 44,10 Z">
+              <animate attributeName="d" dur="5s" repeatCount="indefinite"
+                values="
+                  M44,10 C56,8 68,15 74,26 C80,37 80,51 74,62 C68,73 56,80 44,80 C32,80 20,73 14,62 C8,51 8,37 14,26 C20,15 32,8 44,10 Z;
+                  M44,8 C58,6 70,14 76,26 C82,38 80,54 74,64 C68,74 54,82 42,82 C30,82 18,74 12,63 C6,52 8,36 16,24 C24,12 34,10 44,8 Z;
+                  M44,10 C56,8 68,15 74,26 C80,37 80,51 74,62 C68,73 56,80 44,80 C32,80 20,73 14,62 C8,51 8,37 14,26 C20,15 32,8 44,10 Z"/>
+            </path>
+          </svg>
+          <div class="pace-ring-text">
+            <div class="pace-ring-label">Ahead<br>of plan</div>
+            <div class="pace-ring-sub">V2 → V3</div>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-chip"><strong>71</strong> overall score</span>
+          <span class="meta-chip"><strong>V2</strong> current level</span>
+          <span class="meta-chip"><strong>Feb 2027</strong> V3 projected</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">Contribution</div>
+      <h2 class="chapter-title">What I shipped this month</h2>
+      <p class="chapter-narrative">
+        Shipped 16 of 20 tasks — highest completion rate since Facility 3 launched. Seven original work items created, including a deviation investigation SOP now mandated across all three manufacturing facilities.
+      </p>
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="big">16 <span>/ 20</span></div>
+          <div class="lbl">Tasks Completed</div>
+          <div class="dbar">
+            <div class="dbar-seg" style="width:80%;background:#2D6A4F;"></div>
+            <div class="dbar-seg" style="width:5%;background:#B5451B;"></div>
+            <div class="dbar-seg" style="width:10%;background:#1B4F8A;"></div>
+            <div class="dbar-seg" style="width:5%;background:#EBEBF0;"></div>
+          </div>
+          <div class="sub">Done 16 · Awaiting review 1 · In progress 2 · Not started 1</div>
+        </div>
+        <div class="stat-card">
+          <div class="big">7</div>
+          <div class="lbl">Original Work Items</div>
+          <div class="sub">SOPs, protocols, and analyses verified by program leadership.</div>
+        </div>
+      </div>
+      <details class="evidence">
+        <summary>View 7 knowledge contributions</summary>
+        <div class="evidence-body">
+          <div class="commits">
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Process validation protocol — lyophilized injectable line (3 product families, 12 SKUs)</div><div class="commit-date">Mar 5</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Batch record template — sterile fill-finish with in-process control checkpoints</div><div class="commit-date">Mar 9</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Deviation investigation SOP — now mandated across all 3 facilities</div><div class="commit-date">Mar 14</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Equipment qualification matrix — IQ/OQ/PQ tracker for 14 critical items</div><div class="commit-date">Mar 18</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Environmental monitoring trend analysis — 6-month particulate and viable data</div><div class="commit-date">Mar 22</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Vendor qualification checklist — raw material and primary packaging suppliers</div><div class="commit-date">Mar 26</div></div>
+            <div class="commit"><div class="commit-dot"></div><div class="commit-text">Yield optimization report — identified 8% fill-weight variance in vial line 2</div><div class="commit-date">Mar 29</div></div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">Capability</div>
+      <h2 class="chapter-title">How I'm developing</h2>
+      <p class="chapter-narrative">
+        Delivery (80) and engagement (85) are strong anchors. Framework application (52) and process adoption (58) sit just below the 60 threshold needed for Program Lead eligibility. Closing these over the next 3–4 months will unlock promotion ahead of schedule.
+      </p>
+      <div class="cap-row"><div class="cap-lbl">Engagement</div><div class="cap-track"><div class="cap-fill" style="width:85%;background:#2D6A4F;"></div><div class="cap-threshold"></div></div><div class="cap-val" style="color:#2D6A4F">85</div></div>
+      <div class="cap-row"><div class="cap-lbl">Delivery</div><div class="cap-track"><div class="cap-fill" style="width:80%;background:#2D6A4F;"></div><div class="cap-threshold"></div></div><div class="cap-val" style="color:#2D6A4F">80</div></div>
+      <div class="cap-row"><div class="cap-lbl">Original Work</div><div class="cap-track"><div class="cap-fill" style="width:74%;background:#2D6A4F;"></div><div class="cap-threshold"></div></div><div class="cap-val" style="color:#2D6A4F">74</div></div>
+      <div class="cap-row"><div class="cap-lbl">Process Adoption</div><div class="cap-track"><div class="cap-fill" style="width:58%;background:#B5451B;"></div><div class="cap-threshold"></div></div><div class="cap-val" style="color:#B5451B">58</div></div>
+      <div class="cap-row"><div class="cap-lbl">Framework Use</div><div class="cap-track"><div class="cap-fill" style="width:52%;background:#B5451B;"></div><div class="cap-threshold"></div></div><div class="cap-val" style="color:#B5451B">52</div></div>
+      <p class="cap-note">Vertical line at 60 = next-level promotion threshold</p>
+    </section>
+
+    <section class="chapter">
+      <div class="chapter-label">Trajectory</div>
+      <h2 class="chapter-title">Where I'm headed</h2>
+      <p class="chapter-narrative">
+        Tracking ahead of plan for Program Lead (V3) — projected February 2027, nearly 3 months ahead of the May 2027 target. Delivery and original work scores already exceed V3 thresholds.
+      </p>
+      <div class="runway">
+        <div class="runway-line"></div>
+        <div class="runway-prog"></div>
+        <div class="ms"><div class="ms-dot done"></div><div class="ms-lv">V1</div><div class="ms-dt">Aug 2024</div><div class="ms-tag tag-done">Done</div></div>
+        <div class="ms"><div class="ms-dot now"></div><div class="ms-lv">V2</div><div class="ms-dt">Nov 2025</div><div class="ms-tag tag-now">Now</div></div>
+        <div class="ms"><div class="ms-dot proj"></div><div class="ms-lv">V3</div><div class="ms-dt">Feb 2027</div><div class="ms-tag tag-proj">Projected</div></div>
+        <div class="ms"><div class="ms-dot"></div><div class="ms-lv">V4</div><div class="ms-dt">Aug 2030</div></div>
+        <div class="ms"><div class="ms-dot"></div><div class="ms-lv">V5</div><div class="ms-dt">Aug 2036</div></div>
+      </div>
+    </section>
+
+    <div class="supporting">
+      <section class="chapter">
+        <details class="evidence">
+          <summary>Target outcomes</summary>
+          <div class="evidence-body">
+            <p class="chapter-narrative">
+              Hit 3 of 5 program targets this month. Equipment qualifications and SOPs both overperformed. Batch success rate missed due to a HEPA filter failure that took 11 days to resolve.
+            </p>
+            <div class="stat-row">
+              <div class="stat-card">
+                <div class="big">5</div>
+                <div class="lbl">Targets Committed</div>
+                <div class="sub">Program KPIs logged for March 2026</div>
+              </div>
+              <div class="stat-card">
+                <div class="big">3</div>
+                <div class="lbl">Verified by Manager</div>
+                <div class="sub">Official before/after numbers confirmed by program leadership</div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="chapter">
+        <details class="evidence">
+          <summary>Operating context</summary>
+          <div class="evidence-body">
+            <p class="chapter-narrative">
+              Eight blockers logged this month; five resolved. Rajan cleared the regulatory bottleneck by switching from sequential to joint review sessions — saving three weeks per protocol going forward.
+            </p>
+            <div class="stat-row" style="margin-bottom:20px;">
+              <div class="stat-card" style="text-align:center;">
+                <div class="big">8</div>
+                <div class="lbl">Blockers Logged</div>
+              </div>
+              <div class="stat-card" style="text-align:center;">
+                <div class="big" style="color:#2D6A4F">5</div>
+                <div class="lbl">Resolved</div>
+              </div>
+            </div>
+            <div class="type-chips">
+              <span class="type-chip">Budget <strong>2</strong></span>
+              <span class="type-chip">Talent <strong>2</strong></span>
+              <span class="type-chip">Permissions <strong>2</strong></span>
+              <span class="type-chip">Internal support <strong>1</strong></span>
+              <span class="type-chip">Assumptions <strong>1</strong></span>
+            </div>
+          </div>
+        </details>
+      </section>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
